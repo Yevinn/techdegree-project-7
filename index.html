@@ -11,13 +11,14 @@
     <!-- header with notifcation section -->
     <header>
       <h1>Logo Goes Here</h1>
-      <div>
-        <!-- bell svg -->
-        <div id="notifications"></div>
-      </div>
-      <img src="" alt="" id="user-pic">
-      <h3 id="user-name"></h3>
-    </h1>
+        <div>
+          <!-- bell svg -->
+          <div id="notifications"></div>
+        </div>
+        <img src="" alt="" id="user-pic">
+        <h3 id="user-name"></h3>
+      </h1>
+    </header>
     <!-- Navigation -->
     <nav>
       <a href="#"> <img src="icons/icon-dashboard.svg" alt=""> </a>
@@ -177,6 +178,7 @@
           <p>›</p>
         </div>
       </section>
+      <!-- Message User Section -->
       <section class="message">
         <h3>Message User</h3>
         <form class="widget-container">
@@ -184,6 +186,139 @@
           <textarea placeholder="Message for user" class="form-area" id="messageField" ></textarea>
           <button class="button-primary" id="send">Send</button>
         </form>
+      </section>
+      <!-- Settings Section -->
+      <section class="settings">
+        <h3>Settings</h3>
+        <!-- email notifications toggle -->
+        <p>Email Notifications</p>
+        <label class="switch-light switch-ios" onclick="">
+          <input type="checkbox">
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+        <!-- /email notifications toggle -->
+        <!-- Profile Public toggle -->
+        <p>Set Profile to Public</p>
+        <label class="switch-light switch-ios" onclick="">
+          <input type="checkbox">
+          <span>
+            <span>Off</span>
+            <span>On</span>
+            <a></a>
+          </span>
+        </label>
+        <!-- /Profile Public toggle -->
+        <!-- timezone selection -->
+        <section class="form-field" id="timezone">
+          <option disabled selected>Select a Timezone</option>
+            <!-- timezone 1-5 -->
+          <option value="GMT-12:00">International Date Line West</option>
+          <option value="GMT-11:00">Midway Island, Samoa</option>
+          <option value="GMT-10:00">Hawii</option>
+          <option value="GMT-09:00">Alaska</option>
+          <option value="GMT-08:00">Pacific Time (USA & Canada)</option>
+            <!-- timezone 6-10 -->
+          <option value="GMT-08:00">Tijuana Baja California</option>
+          <option value="GMT-07:00">Arizona</option>
+          <option value="GMT-07:00">Chihuahua, La Paz, Mazatlan</option>
+          <option value="GMT-07:00">Mountain Time (USA & Canada)</option>
+          <option value="GMT-06:00">Central America(USA & Canada)</option>
+            <!-- timezone 11-15 -->
+          <option value="GMT-06:00">Central Time</option>
+          <option value="GMT-06:00">Guadalajara, Mexico City, Monterrey</option>
+          <option value="GMT-06:00">Saskatchewan</option>
+          <option value="GMT-05:00">Bogota Lima, Quito, Rio Branco</option>
+          <option value="GMT-05:00">Eastern Time (USA & Canada)</option>
+            <!-- timezone 16-20 -->
+          <option value="GMT-05:00">Indiana(East)</option>
+          <option value="GMT-04:00">Atlantic Time(Canada)</option>
+          <option value="GMT-04:00">Caracas, La Paz</option>
+          <option value="GMT-04:00">Manaus</option>
+          <option value="GMT-04:00">Santiago</option>
+            <!-- timezone 21-25 -->
+          <option value="GMT-03:30">Newfoundland</option>
+          <option value="GMT-03:00">Brasilia</option>
+          <option value="GMT-03:00">Buenos Aires, Georgetown</option>
+          <option value="GMT-03:00">Greenland</option>
+          <option value="GMT-03:00">Montevideo</option>
+            <!-- timezone 26-30 -->
+          <option value="GMT-02:00">Mid-Atlantic</option>
+          <option value="GMT-01:00">Cape Verde Is.</option>
+          <option value="GMT-01:00">Azores</option>
+          <option value="GMT+00:00">Casablance, Monrovia Reykjavik</option>
+          <option value="GMT+00:00">Greenween Eich Mean Time: Dublin,Edinburgh. Lisbon, London</option>
+            <!-- timezone 31-35 -->
+          <option value="GMT+01:00">Berlin, Bern, Rome, Stockholm, Vienna</option>
+          <option value="GMT+01:00">Belgrade, Bratislava, Budpest, Ljubljana, Prague</option>
+          <option value="GMT+01:00">Brussels, Copenhagen, Madrid, Paris</option>
+          <option value="GMT+01:00">Sarajevo. Skopji, Warsaw, Zagreb</option>
+          <option value="GMT+01:00">West Central Africa</option>
+            <!-- timezone 36-40 -->
+          <option value="GMT+02:00">Aman</option>
+          <option value="GMT+02:00">Athens. Bucharest, Istanbul</option>
+          <option value="GMT+02:00">Bierut</option>
+          <option value="GMT+02:00">Cairo</option>
+          <option value="GMT+02:00">Harare, Pretoria</option>
+            <!-- timezone 41-45 -->
+          <option value="GMT+02:00">Helsinki Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
+          <option value="GMT+02:00">Jerusalem</option>
+          <option value="GMT+02:00">Minsk</option>
+          <option value="GMT+02:00">Windhoek</option>
+          <option value="GMT+03:00">Kuwait, Riyadh, Baghdad</option>
+            <!-- timezone 46-50 -->
+          <option value="GMT+03:00">Moscow, St. Petersburg. Volgograd</option>
+          <option value="GMT+03:00">Nairobi</option>
+          <option value="GMT+03:00">Tbilisi</option>
+          <option value="GMT+03:30">Tehran</option>
+          <option value="GMT+04:00">Abu Dhabi, Muscat</option>
+            <!-- timezone 51-55 -->
+          <option value="GMT+04:00">Baku</option>
+          <option value="GMT+04:00">Yerevan</option>
+          <option value="GMT+04:30">Kabul</option>
+          <option value="GMT+05:00">Yekaterinburg</option>
+          <option value="GMT+05:00">Islambad, Karachi, Tashkent</option>
+            <!-- timezone 56-60 -->
+          <option value="GMT+05:30">Sri Jayawardenapura</option>
+          <option value="GMT+05:30">Chennai Kolkata, Mumbai, New Delhi</option>
+          <option value="GMT+05:45">Kathmandu</option>
+          <option value="GMT+06:00">Almaty, Novosivirsk</option>
+          <option value="GMT+06:00">Astana, Dhaka</option>
+            <!-- timezone 61-65 -->
+          <option value="GMT+06:30">Yangon(Rangoon)</option>
+          <option value="GMT+07:00">Bangkok, Hanoi, Jakarta</option>
+          <option value="GMT+07:00">Krasnoyarsk</option>
+          <option value="GMT+08:00">Beijing,Chongqing, Hong Kong, Urumqi</option>
+          <option value="GMT+08:00">Kuala Lumpur, Singapore</option>
+            <!-- timezone 66-70 -->
+          <option value="GMT+08:00">Irkutsk, Ulaan Bataar</option>
+          <option value="GMT+08:00">Perth</option>
+          <option value="GMT+08:00">Taipei</option>
+          <option value="GMT+09:00">Osaka, Sapporo, Tokyo</option>
+          <option value="GMT+09:00">Seoul</option>
+            <!-- timezone 71-76 -->
+          <option value="GMT+09:00">Yakustsk</option>
+          <option value="GMT+09:30">Adelaide</option>
+          <option value="GMT+09:30">Darwin</option>
+          <option value="GMT+10:00">Brisbane</option>
+          <option value="GMT+10:00">Canberra, Melbourne, Sydney</option>
+          <option value="GMT+10:00">Hobart</option>
+            <!-- timezone 77-82 -->
+          <option value="GMT+10:00">Guam, Port Moreby</option>
+          <option value="GMT+10:00">Vladivostok</option>
+          <option value="GMT+11:00"> Magadan, Solomon Is., New Caledonia</option>
+          <option value="GMT+12:00">Auckland, Wellington</option>
+          <option value="GMT+12:00">Fiji, Kamchatka, Marshall Is.</option>
+          <option value="GMT+13:00">Nuku'alofa</option>
+        </section>
+        <div class="settings-button">
+          <button class="button-primary" id="save">Save</button>
+          <button class="button-disabled" id="cancel">Cancel</button>  
+        </div>
+
       </section>
 
     </main>
