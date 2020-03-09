@@ -32,7 +32,7 @@ main{
 }
 
 
-/* header styles */
+/* header styles ----------------------- */
 h1{
   margin-left: 25px;
   font-weight: 100;
@@ -60,7 +60,7 @@ h1{
   padding-top: 10px;
 }
 
-/* navigation styles */
+/* navigation styles ----------------------- */
 .navigation{
   display:block;
   margin: 0 auto;
@@ -78,6 +78,35 @@ nav img{
   margin-bottom: -4px;
 }
 
+/* Main Section Styles ----------------------- */
+.main-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.headline{
+  padding: 20px;
+}
+.main-header-search{
+  display: flex;
+  align-content: center;
+  background-color: #FBFBFB;
+  border-left: 1px solid #DFDFDF;
+  border-bottom: 1px solid #DFDFDF;
+  justify-content: flex-end;
+  margin: 0;
+  padding: 20px;
+  width: 80%;
+}
+.main-header-search input{
+  width: 80%;
+  height: 40px;
+  border-radius: 3px;
+  border: 2px solid #dbdbdb;
+  padding-left: 15px;
+} 
+
 @media(min-width: 768px){
   .grid{
     grid-template-columns: 60px 1fr;
@@ -89,7 +118,7 @@ nav img{
   main{
     grid-template-columns: 1fr;
   }
-  .traffic, .social{
+  .main-header, .traffic, .social{
     grid-column: 1 / span 2;
   }
   .daily, .members, .message {
