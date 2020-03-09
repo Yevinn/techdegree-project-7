@@ -26,6 +26,7 @@ nav{
 main{
   grid-area: main;
   display: grid;
+  padding: 0 20px;
 }
 .widget-container-full, .widget-container-half{
   width: 95vw;
@@ -84,16 +85,12 @@ nav img{
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  flex-wrap: wrap;
 }
-.headline{
-  padding: 20px;
-}
+
 .main-header-search{
   display: flex;
   align-content: center;
-  background-color: #FBFBFB;
-  border-left: 1px solid #DFDFDF;
-  border-bottom: 1px solid #DFDFDF;
   justify-content: flex-end;
   margin: 0;
   padding: 20px;
@@ -106,6 +103,30 @@ nav img{
   border: 2px solid #dbdbdb;
   padding-left: 15px;
 } 
+
+/* Web Traffic Styles */
+.traffic-nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.traffic h3{
+  width: 50%;
+}
+.traffic-nav{
+  list-style-type: none;
+}
+.traffic-nav-link{
+  padding: 8px 15px;
+}
+
+.traffic-active{
+  background-color: #EB0909;
+  color: #fff;
+  border-radius: 16px;
+}
 
 @media(min-width: 768px){
   .grid{
