@@ -1,5 +1,6 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
+    color: #676666;
 }
 .grid{
   display: grid;
@@ -70,6 +71,12 @@ nav img{
   width: 30px;
   padding: 10px;
 }
+.active{
+  border-bottom: 4px solid#fff;
+  border-left: 4px solid #B90404;
+  border-right: 4px solid#B90404;
+  margin-bottom: -4px;
+}
 
 @media(min-width: 768px){
   .grid{
@@ -99,5 +106,12 @@ nav img{
   }
   .navigation{
     padding-top: 25px;
+  }
+
+  .active{
+    border-left: 4px solid#fff;
+    border-top: 4px solid #B90404;
+    border-bottom: 4px solid#B90404;
+    margin-left: -6px;
   }
 }
