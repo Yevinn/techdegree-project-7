@@ -21,16 +21,7 @@ nav{
   grid-area: nav;
   background-color: #B90404;
 }
-.navigation{
-  display:block;
-  margin: 0 auto;
-  text-align: center;
-}
-nav img{
-  display: inline-block;
-  width: 35px;
-  padding: 10px;
-}
+
 main{
   grid-area: main;
   display: grid;
@@ -39,6 +30,8 @@ main{
   width: 95vw;
 }
 
+
+/* header styles */
 h1{
   margin-left: 25px;
   font-weight: 100;
@@ -61,6 +54,17 @@ h1{
   margin-top: 0;
 }
 
+/* navigation styles */
+.navigation{
+  display:block;
+  margin: 0 auto;
+  text-align: center;
+}
+nav img{
+  display: inline-block;
+  width: 35px;
+  padding: 10px;
+}
 
 @media(min-width: 768px){
   .grid{
