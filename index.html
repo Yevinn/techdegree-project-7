@@ -6,6 +6,7 @@
   <title>Techdegree Project 7</title>
   <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400;1,600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/toggle-switch.css">
   <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -76,7 +77,7 @@
       </section>
       <!-- /traffic line chart -->
       <!-- daily traffic bar graph -->
-      <section class=​"daily">
+      <section class="daily">
         <h3>Daily Traffic</h3>
         <div class="widget-container-half">
           <!-- element bar graph will attach to -->
@@ -85,7 +86,7 @@
       </section>
       <!-- /daily traffic bar graph -->
       <!-- mobile user doughnut chart -->
-      <section class=​"mobile-user">
+      <section class="mobile-user">
         <h3>Mobile User</h3>
         <div class="widget-container-half">
           <!-- element bar graph will attach to -->
@@ -95,36 +96,45 @@
       <!-- /mobile user doughnut chart -->
       <div class="social-section">
         <h3> Social Stats</h3>
-        <!-- Twitter section -->
-        <div class="social-container">
-          <div class="social-image">
-            <!-- twitter svg code goes here -->
+        <div class="social-wrap">
+          <!-- Twitter section -->
+          <div class="social-container">
+            <div class="social-image">
+              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="-1 -4 32 32">
+                <path fill="#fff" d="M32 3.1c-1.2.5-2.4.9-3.8 1 1.4-.8 2.4-2.1 2.9-3.6-1.3.8-2.7 1.3-4.2 1.6C25.8.8 24 0 22.2 0c-3.6 0-6.6 2.9-6.6 6.6 0 .5.1 1 .2 1.5-5.5-.3-10.3-2.9-13.6-6.9-.6 1-.9 2.1-.9 3.3 0 2.3 1.2 4.3 2.9 5.5-1.1 0-2.1-.3-3-.8v.1c0 3.2 2.3 5.8 5.3 6.4-.6.1-1.1.2-1.7.2-.4 0-.8 0-1.2-.1.8 2.6 3.3 4.5 6.1 4.6-2.2 1.8-5.1 2.8-8.2 2.8-.5 0-1.1 0-1.6-.1 2.9 1.9 6.4 3 10.1 3 12.1 0 18.7-10 18.7-18.7v-.8c1.3-1 2.4-2.2 3.3-3.5z"></path>
+              </svg>
+            </div>
+            <div class="social-text">
+              <p>Twitter</p>
+              <p>9,345</p>
+            </div>
           </div>
-          <div class="social-text">
-            <p>Twitter</p>
-            <p>10,345</p>
+          <!-- facebook section -->
+          <div class="social-container">
+            <div class="social-image">
+              <svg  xmlns="http://www.w3.org/2000/svg" viewBox="5 5 50 50">
+                <path fill="#fff" d="M40.43 21.739h-7.645v-5.014c0-1.883 1.248-2.322 2.127-2.322h5.395V6.125l-7.43-.029c-8.248 0-10.125 6.174-10.125 10.125v5.518h-4.77v8.53h4.77v24.137h10.033V30.269h6.77l.875-8.53z"></path>
+              </svg>
+            </div>
+            <div class="social-text">
+              <p>Facebook</p>
+              <p>8,739</p>
+            </div>
+          </div>
+          <!-- google plus section -->
+          <div class="social-container">
+            <div class="social-image">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+                <path fill="#fff" d="M17.7 25.7c0-.3 0-.5-.1-.8-.1-.2-.1-.5-.2-.7-.1-.2-.2-.4-.3-.7-.2-.2-.3-.4-.4-.6-.1-.2-.3-.3-.5-.6l-.5-.5c-.1-.1-.3-.3-.6-.5s-.5-.4-.6-.4-.3-.2-.6-.4-.5-.4-.6-.4h-1c-.7 0-1.4 0-2 .1-.7.1-1.4.2-2.1.5-.7.2-1.3.5-1.9.9s-1 .8-1.3 1.4c-.3.6-.5 1.3-.5 2.1 0 .9.2 1.7.7 2.3.5.7 1.1 1.2 1.8 1.6s1.5.7 2.3.9 1.6.3 2.4.3c.8 0 1.5-.1 2.2-.2.7-.2 1.3-.4 1.9-.8.6-.3 1.1-.8 1.4-1.4.3-.6.5-1.3.5-2.1zM15.4 9.1c0-.8-.1-1.6-.3-2.5-.2-.9-.5-1.7-.9-2.5s-.9-1.5-1.6-2c-.7-.5-1.5-.8-2.3-.8-1.2 0-2.1.4-2.8 1.3-.7.9-1 1.9-1 3.2 0 .6.1 1.2.2 1.9s.4 1.3.7 2c.3.7.7 1.3 1.1 1.8.4.5.9 1 1.5 1.3.6.3 1.2.5 1.9.5 1.2 0 2.1-.4 2.7-1.2.5-.7.8-1.7.8-3zM12.9 0h8.4l-2.6 1.5h-2.6c.9.6 1.6 1.4 2.1 2.4S19 6 19 7.1c0 .9-.1 1.8-.4 2.5-.3.7-.7 1.3-1.1 1.8-.4.4-.8.9-1.3 1.2-.4.4-.8.8-1.1 1.2-.3.4-.4.8-.4 1.3 0 .3.1.7.3 1 .2.3.5.6.8.9.3.3.7.6 1.1.9.4.3.8.7 1.2 1.1.4.4.8.8 1.1 1.3.3.5.6 1 .8 1.6.2.6.3 1.3.3 2 0 2.1-.9 3.9-2.7 5.4-1.9 1.7-4.6 2.5-8.1 2.5-.8 0-1.5-.1-2.3-.2-.8-.1-1.6-.3-2.3-.6-.8-.3-1.5-.7-2.1-1.1-.6-.4-1.1-1-1.5-1.7C1 27.6.8 26.9.8 26c0-.8.2-1.6.7-2.6.4-.8 1-1.5 1.8-2.1.8-.6 1.8-1.1 2.8-1.4 1-.3 2-.5 3-.7.9-.1 1.9-.2 2.9-.3-.8-1.1-1.2-2-1.2-2.9v-.5c0-.1.1-.3.1-.4 0-.1.1-.2.2-.4s.1-.3.1-.4c-.5.1-1 .1-1.3.1-1.9 0-3.5-.6-4.9-1.9-1.4-1.3-2-2.8-2-4.7C3 6 3.6 4.4 4.8 3 6 1.7 7.5.8 9.3.4c1.2-.3 2.4-.4 3.6-.4zm19.9 4.9v2.5h-4.9v4.9h-2.5V7.4h-4.9V4.9h4.9V0h2.5v4.9h4.9z"></path>
+              </svg>
+            </div>
+            <div class="social-text">
+              <p>Google+</p>
+              <p>1</p>
+            </div>
           </div>
         </div>
-        <!-- facebook section -->
-        <div class="social-container">
-          <div class="social-image">
-            <!-- facebook svg code goes here -->
-          </div>
-          <div class="social-text">
-            <p>Facebook</p>
-            <p>8,739</p>
-          </div>
-        </div>
-        <!-- google plus section -->
-        <div class="social-container">
-          <div class="social-image">
-            <!-- google plus svg code goes here -->
-          </div>
-          <div class="social-text">
-            <p>Google+</p>
-            <p>1</p>
-          </div>
-        </div>
+        
       </div>
       <!-- /social section -->
       <!-- New Members Section -->
@@ -165,7 +175,7 @@
       </section>
       <!-- /New Members Section -->
       <!-- Recent Activity Section -->
-      <section class="members">
+      <section class="activity">
         <h3>Recent Activity</h3>
         <div class="recent-activity">
           <img src="images/member-1.jpg" class="profile-image">
@@ -173,15 +183,15 @@
             <p>Victoria Chambers commented on YourApps's SEO Tips</p>
             <p>4 hours ago</p>
           </div>
-          <p>›</p>
+          <p class="activity-right">›</p>
         </div>
         <div class="recent-activity">
           <img src="images/member-2.jpg" class="profile-image">
           <div class="members-text">
-            <p>Dale Byrd liked the poost Facebook's Changes for 2016</p>
+            <p>Dale Byrd liked the post Facebook's Changes for 2016</p>
             <p>5 hours ago</p>
           </div>
-          <p>›</p>
+          <p class="activity-right">›</p>
         </div>
         <div class="recent-activity">
           <img src="images/member-3.jpg" class="profile-image">
@@ -189,7 +199,7 @@
             <p>Dawn Wood commented on Facebook's Changes for 2016</p>
             <p>5 hours ago</p>
           </div>
-          <p>›</p>
+          <p class="activity-right">›</p>
         </div>
         <div class="recent-activity">
           <img src="images/member-4.jpg" class="profile-image">
@@ -197,7 +207,7 @@
             <p>Dan Oliver posted YourApp's SEO Tips</p>
             <p>1 day ago</p>
           </div>
-          <p>›</p>
+          <p class="activity-right">›</p>
         </div>
       </section>
       <!-- Message User Section -->
@@ -213,129 +223,68 @@
       <section class="settings">
         <h3>Settings</h3>
         <!-- email notifications toggle -->
-        <p>Email Notifications</p>
-        <label class="switch-light switch-ios" onclick="">
-          <input type="checkbox">
-          <span>
-            <span>Off</span>
-            <span>On</span>
-            <a></a>
-          </span>
-        </label>
+        <div class="email-notifications-wrapper">
+          <p>Email Notifications</p>
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
         <!-- /email notifications toggle -->
         <!-- Profile Public toggle -->
-        <p>Set Profile to Public</p>
-        <label class="switch-light switch-ios" onclick="">
-          <input type="checkbox">
-          <span>
-            <span>Off</span>
-            <span>On</span>
-            <a></a>
-          </span>
-        </label>
+        <div class="email-notifications-wrapper">
+          <p>Set Profile to Public</p>
+          <label class="switch-light switch-ios" onclick="">
+            <input type="checkbox">
+            <span>
+              <span>Off</span>
+              <span>On</span>
+              <a></a>
+            </span>
+          </label>
+        </div>
         <!-- /Profile Public toggle -->
         <!-- timezone selection -->
-        <section class="form-field" id="timezone">
-          <option disabled selected>Select a Timezone</option>
-            <!-- timezone 1-5 -->
-          <option value="GMT-12:00">International Date Line West</option>
-          <option value="GMT-11:00">Midway Island, Samoa</option>
-          <option value="GMT-10:00">Hawii</option>
-          <option value="GMT-09:00">Alaska</option>
-          <option value="GMT-08:00">Pacific Time (USA & Canada)</option>
-            <!-- timezone 6-10 -->
-          <option value="GMT-08:00">Tijuana Baja California</option>
-          <option value="GMT-07:00">Arizona</option>
-          <option value="GMT-07:00">Chihuahua, La Paz, Mazatlan</option>
-          <option value="GMT-07:00">Mountain Time (USA & Canada)</option>
-          <option value="GMT-06:00">Central America(USA & Canada)</option>
-            <!-- timezone 11-15 -->
-          <option value="GMT-06:00">Central Time</option>
-          <option value="GMT-06:00">Guadalajara, Mexico City, Monterrey</option>
-          <option value="GMT-06:00">Saskatchewan</option>
-          <option value="GMT-05:00">Bogota Lima, Quito, Rio Branco</option>
-          <option value="GMT-05:00">Eastern Time (USA & Canada)</option>
-            <!-- timezone 16-20 -->
-          <option value="GMT-05:00">Indiana(East)</option>
-          <option value="GMT-04:00">Atlantic Time(Canada)</option>
-          <option value="GMT-04:00">Caracas, La Paz</option>
-          <option value="GMT-04:00">Manaus</option>
-          <option value="GMT-04:00">Santiago</option>
-            <!-- timezone 21-25 -->
-          <option value="GMT-03:30">Newfoundland</option>
-          <option value="GMT-03:00">Brasilia</option>
-          <option value="GMT-03:00">Buenos Aires, Georgetown</option>
-          <option value="GMT-03:00">Greenland</option>
-          <option value="GMT-03:00">Montevideo</option>
-            <!-- timezone 26-30 -->
-          <option value="GMT-02:00">Mid-Atlantic</option>
-          <option value="GMT-01:00">Cape Verde Is.</option>
-          <option value="GMT-01:00">Azores</option>
-          <option value="GMT+00:00">Casablance, Monrovia Reykjavik</option>
-          <option value="GMT+00:00">Greenween Eich Mean Time: Dublin,Edinburgh. Lisbon, London</option>
-            <!-- timezone 31-35 -->
-          <option value="GMT+01:00">Berlin, Bern, Rome, Stockholm, Vienna</option>
-          <option value="GMT+01:00">Belgrade, Bratislava, Budpest, Ljubljana, Prague</option>
-          <option value="GMT+01:00">Brussels, Copenhagen, Madrid, Paris</option>
-          <option value="GMT+01:00">Sarajevo. Skopji, Warsaw, Zagreb</option>
-          <option value="GMT+01:00">West Central Africa</option>
-            <!-- timezone 36-40 -->
-          <option value="GMT+02:00">Aman</option>
-          <option value="GMT+02:00">Athens. Bucharest, Istanbul</option>
-          <option value="GMT+02:00">Bierut</option>
-          <option value="GMT+02:00">Cairo</option>
-          <option value="GMT+02:00">Harare, Pretoria</option>
-            <!-- timezone 41-45 -->
-          <option value="GMT+02:00">Helsinki Kyiv, Riga, Sofia, Tallinn, Vilnius</option>
-          <option value="GMT+02:00">Jerusalem</option>
-          <option value="GMT+02:00">Minsk</option>
-          <option value="GMT+02:00">Windhoek</option>
-          <option value="GMT+03:00">Kuwait, Riyadh, Baghdad</option>
-            <!-- timezone 46-50 -->
-          <option value="GMT+03:00">Moscow, St. Petersburg. Volgograd</option>
-          <option value="GMT+03:00">Nairobi</option>
-          <option value="GMT+03:00">Tbilisi</option>
-          <option value="GMT+03:30">Tehran</option>
-          <option value="GMT+04:00">Abu Dhabi, Muscat</option>
-            <!-- timezone 51-55 -->
-          <option value="GMT+04:00">Baku</option>
-          <option value="GMT+04:00">Yerevan</option>
-          <option value="GMT+04:30">Kabul</option>
-          <option value="GMT+05:00">Yekaterinburg</option>
-          <option value="GMT+05:00">Islambad, Karachi, Tashkent</option>
-            <!-- timezone 56-60 -->
-          <option value="GMT+05:30">Sri Jayawardenapura</option>
-          <option value="GMT+05:30">Chennai Kolkata, Mumbai, New Delhi</option>
-          <option value="GMT+05:45">Kathmandu</option>
-          <option value="GMT+06:00">Almaty, Novosivirsk</option>
-          <option value="GMT+06:00">Astana, Dhaka</option>
-            <!-- timezone 61-65 -->
-          <option value="GMT+06:30">Yangon(Rangoon)</option>
-          <option value="GMT+07:00">Bangkok, Hanoi, Jakarta</option>
-          <option value="GMT+07:00">Krasnoyarsk</option>
-          <option value="GMT+08:00">Beijing,Chongqing, Hong Kong, Urumqi</option>
-          <option value="GMT+08:00">Kuala Lumpur, Singapore</option>
-            <!-- timezone 66-70 -->
-          <option value="GMT+08:00">Irkutsk, Ulaan Bataar</option>
-          <option value="GMT+08:00">Perth</option>
-          <option value="GMT+08:00">Taipei</option>
-          <option value="GMT+09:00">Osaka, Sapporo, Tokyo</option>
-          <option value="GMT+09:00">Seoul</option>
-            <!-- timezone 71-76 -->
-          <option value="GMT+09:00">Yakustsk</option>
-          <option value="GMT+09:30">Adelaide</option>
-          <option value="GMT+09:30">Darwin</option>
-          <option value="GMT+10:00">Brisbane</option>
-          <option value="GMT+10:00">Canberra, Melbourne, Sydney</option>
-          <option value="GMT+10:00">Hobart</option>
-            <!-- timezone 77-82 -->
-          <option value="GMT+10:00">Guam, Port Moreby</option>
-          <option value="GMT+10:00">Vladivostok</option>
-          <option value="GMT+11:00"> Magadan, Solomon Is., New Caledonia</option>
-          <option value="GMT+12:00">Auckland, Wellington</option>
-          <option value="GMT+12:00">Fiji, Kamchatka, Marshall Is.</option>
-          <option value="GMT+13:00">Nuku'alofa</option>
-        </section>
+
+        <select class="form-field" id="timezone">
+          <optgroup label="Timezone">
+            <option value="Default">Choose your Timezone...</option>
+          </optgroup><optgroup label="Africa">
+            <option value="Dakar">Dakar(GTM 09:00 AM)</option>
+            <option value="Kapstadt">Kapstadt(GTM 11:00 AM)</option>
+          </optgroup>
+          <optgroup label="Antartica">
+            <option value="Alaska">Alaska(GTM 12:00 AM)</option>
+          </optgroup>
+          <optgroup label="Canada">
+            <option value="Calgary">Calgary(GTM 02:00 AM)</option>
+          </optgroup>
+          <optgroup label="Asia">
+            <option value="Moskau">Moskau(GTM 12:00 PM)</option>
+            <option value="New Delhi">New Delhi(GTM 2:30 PM)</option>
+          </optgroup>
+          <optgroup label="Europe">
+            <option value="London">London(GTM 09:00 AM)</option>
+            <option value="Rome">Rome(GTM 10:00 AM)</option>
+          </optgroup>
+          <optgroup label="North America">
+            <option value="Honolulu">Honolulu(GTM 11:00 PM)</option>
+            <option value="Los Angeles">Los Angeles(GTM 01:00 AM)</option>
+            <option value="New York">New York(GTM 04:00 AM)</option>
+          </optgroup>
+          <optgroup label="Oceania">
+            <option value="Sydney">Sydney(GTM 08:00 PM)</option>
+            <option value="Neuseeland">Neuseeland(GTM 10:00 PM)</option>
+          </optgroup>
+          <optgroup label="South America">
+            <option value="Lima">Lima(GTM 04:00 AM)</option>
+            <option value="Sao Paulo">Sao Paulo(GTM 06:00 AM)</option>
+          </optgroup>
+        </select>
         <div class="settings-button">
           <button class="button-primary" id="save">Save</button>
           <button class="button-disabled" id="cancel">Cancel</button>  

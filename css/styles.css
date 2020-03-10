@@ -26,12 +26,24 @@ nav{
 main{
   grid-area: main;
   display: grid;
-  padding: 0 20px;
 }
 .widget-container-full, .widget-container-half{
   width: 95vw;
 }
 
+.daily,
+.mobile-user,
+.members,
+.activity,
+.message,
+.settings,
+.social-section{
+  padding: 20px;
+  border: 1px solid #ddd;
+}
+.traffic{
+  padding: 20px;
+}
 
 /* header styles ----------------------- */
 h1{
@@ -103,8 +115,10 @@ nav img{
   border: 2px solid #dbdbdb;
   padding-left: 15px;
 } 
-
-/* Web Traffic Styles */
+.headline{
+  padding-left: 20px;
+}
+/* Web Traffic Styles ----------------------- */
 .traffic-nav{
   display: flex;
   align-items: center;
@@ -128,6 +142,156 @@ nav img{
   border-radius: 16px;
 }
 
+/* Social Stats Styles ----------------------- */
+.social-wrap{
+  display:flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 20px 0 40px;
+  flex-wrap: wrap;
+}
+.social-container{
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  border: 2px solid #EB0909;
+  border-radius: 8px;
+  padding: 25px;
+  width: 60%;
+  margin-bottom: 25px;
+}
+.social-image{
+  max-width: 50px;
+  width: 100%;
+  background-color: #EB0909;
+  padding: 15px;
+  border-radius: 50%;
+
+}
+
+.social-text p:first-child{
+  color: #EB0909;
+  font-size: 18px;
+  margin: 0;
+}
+.social-text p:last-child{
+  font-size: 50px;
+  margin: 0;
+}
+/* New Members Styles ----------------------- */
+.members-container,
+.recent-activity{
+  display: flex;
+  align-items: center;
+  padding: 25px 0;
+  border-bottom: 1px solid #ddd;
+}
+.members-container:last-child,
+.recent-activity:last-child{
+  border-bottom: none;
+}
+.profile-image{
+  width:35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.members-text a{
+  color: #EB0909;
+  text-decoration: none;;
+}
+.members-text a:hover{
+  text-decoration: underline;
+}
+.members-container p,
+.recent-activity p{
+  margin: 0;
+}
+.members-container p:last-child,
+.recent-activity p:last-child{
+  margin-left: auto;
+}
+.activity-right{
+  font-size: 30px
+}
+/* New Members Styles ----------------------- */
+.widget-container{
+  display: flex;
+  flex-direction: column;
+  margin: 25px 0;
+}
+#userField{
+  margin-bottom: 25px;
+  height: 35px;
+  border-radius: 5px;
+  border: 1px solid#ddd;
+  background-color: #;
+  padding-left: 15px;
+}
+#messageField{
+  margin-bottom: 25px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  min-height: 100px;
+}
+#send{
+  padding: 15px;
+  background-color: #EB0909;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+}
+
+.email-notifications-wrapper{
+  margin: 25px 0;
+}
+.switch-ios.switch-light > span{
+  width: 10%;
+}
+
+.settings p{
+  float: left;
+  padding-top: 7px;
+  padding-right: 35px;
+  margin: 0;
+}
+#timezone{
+  display: flex;
+  align-items: center;
+  height: 50px;
+  border: 1px solid#ddd;
+  border-radius: 5px;
+  justify-content: center;
+  width: 100%;
+}
+.settings-button{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 25px;
+}
+#save{
+  padding: 15px;
+  background-color: #EB0909;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  width: 40%;
+
+}
+#cancel{
+  padding: 15px;
+  background-color: #B2B2B2;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  text-transform: uppercase;
+  width: 40%;
+}
+
+
 @media(min-width: 768px){
   .grid{
     grid-template-columns: 60px 1fr;
@@ -139,13 +303,13 @@ nav img{
   main{
     grid-template-columns: 1fr;
   }
-  .main-header, .traffic, .social{
+  .main-header, .traffic, .social-section{
     grid-column: 1 / span 2;
   }
   .daily, .members, .message {
     grid-column: 1 / span 1;
   }
-  .mobile, .acvitiy, .settings{
+  .mobile, .activity, .settings{
     grid-column: 2 / span 1;
   }
   .widget-container-full{
@@ -163,5 +327,15 @@ nav img{
     border-top: 4px solid #B90404;
     border-bottom: 4px solid#B90404;
     margin-left: -6px;
+  }
+  .social-container{
+    width: 30%;
+  }
+}
+
+
+@media(min-width: 1024px){
+  .social-container{
+    width: 23%;
   }
 }
