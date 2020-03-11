@@ -1,6 +1,7 @@
 body{
     font-family: 'Source Sans Pro', sans-serif;
     color: #676666;
+    box-sizing: border-box;
 }
 .grid{
   display: grid;
@@ -10,6 +11,8 @@ body{
     "header" 
     "nav" 
     "main";
+    width: 100vw;
+    min-width: 300px;
 }
 header{
   grid-area: header;
@@ -28,10 +31,10 @@ main{
   display: grid;
 }
 .widget-container-full, .widget-container-half{
-  width: 95vw;
+  width: 90vw;
 }
 
-.daily,
+/* .daily,
 .mobile-user,
 .members,
 .activity,
@@ -40,11 +43,22 @@ main{
 .social-section{
   padding: 20px;
   border: 1px solid #ddd;
-}
-.traffic{
+} */
+/* .traffic{
   padding: 20px;
+} */
+.traffic,
+.daily,
+.mobile-user,
+.members,
+.activity,
+.message,
+.settings,
+.social-section{
+  width: 90%;
+  margin: 0 auto;
+  display: block;
 }
-
 /* header styles ----------------------- */
 h1{
   margin-left: 25px;
@@ -85,8 +99,9 @@ h1{
   padding: 0 15px;
 }
 .user-name{
-  margin-right: 25px;
+  padding-right: 25px;
   padding-top: 10px;
+  display: none;
 }
 
 /* navigation styles ----------------------- */
@@ -141,6 +156,7 @@ nav img{
   justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
+  font-size: 12px;
 }
 .traffic h3{
   width: 50%;
@@ -211,6 +227,9 @@ nav img{
   height: 35px;
   border-radius: 50%;
   margin-right: 15px;
+}
+.members-text{
+  font-size: 12px;
 }
 .members-text a{
   color: #EB0909;
@@ -312,14 +331,17 @@ nav img{
 
 #alert{
   background-color: #EB0909;
-  margin: 20px;
   border-radius: 100px;
+  width: 80%;
+  display: block;
+  margin: 20px auto;
 }
 .alert-banner{
   display: flex;
   justify-content: center;
   align-items: center;
   color: #fff;
+  font-size: 12px;
 }
 .alert-banner p strong:first-child{
   text-decoration: underline;
@@ -339,6 +361,18 @@ nav img{
       "header header"
       "nav main"
   }
+  .traffic,
+  .daily,
+  .mobile-user,
+  .members,
+  .activity,
+  .message,
+  .settings,
+  .social-section{
+    width: 90%;
+    margin: 20px auto;
+    display: block;
+  }
   main{
     grid-template-columns: 1fr;
   }
@@ -352,10 +386,10 @@ nav img{
     grid-column: 2 / span 1;
   }
   .widget-container-full{
-    width: 90vw;
+    width: 76vw;
   }
   .widget-container-half{
-    width: 45vw;
+    width: 38vw;
   }
   .navigation{
     padding-top: 25px;
@@ -370,11 +404,36 @@ nav img{
   .social-container{
     width: 30%;
   }
+  .user-name{
+    padding-right: 25px;
+    padding-top: 10px;
+    display: inline;
+  }
 }
 
 
 @media(min-width: 1024px){
   .social-container{
     width: 23%;
+  }
+  .traffic,
+  .daily,
+  .mobile-user,
+  .members,
+  .activity,
+  .message,
+  .settings{
+    width: auto;
+    margin: 20px;
+    display: block;
+  }
+  .social-section{
+    width: 100%;
+  }
+  .widget-container-full {
+      width: 80vw;
+  }
+  .widget-container-half {
+    width: 40vw;
   }
 }
