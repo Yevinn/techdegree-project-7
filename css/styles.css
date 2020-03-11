@@ -291,6 +291,28 @@ nav img{
   width: 40%;
 }
 
+/* Alert Bar Styles ----------------------- */
+
+#alert{
+  background-color: #EB0909;
+  margin: 20px;
+  border-radius: 100px;
+}
+.alert-banner{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.alert-banner p strong:first-child{
+  text-decoration: underline;
+}
+.alert-banner-close{
+  margin-left: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  
+}
 
 @media(min-width: 768px){
   .grid{
@@ -303,7 +325,7 @@ nav img{
   main{
     grid-template-columns: 1fr;
   }
-  .main-header, .traffic, .social-section{
+  .main-header, .traffic, .social-section, .alert{
     grid-column: 1 / span 2;
   }
   .daily, .members, .message {
