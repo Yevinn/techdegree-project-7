@@ -55,6 +55,22 @@ h1{
   margin-left: auto;
   padding-right: 15px;
   padding-top: 5px;
+  position: relative;
+  transition: .3s ease;
+}
+#bell:hover {
+  transform: rotate(-10deg) scale(1.15);
+  cursor: pointer;
+}
+#notifications{
+  background-color: #09EB23;
+  height: 10px; 
+  width: 10px;
+  position: absolute;
+  top: 5px ;
+  left: 15px;
+  border-radius: 50%;
+
 }
 .user{
   display: flex;
@@ -233,6 +249,7 @@ nav img{
   border-radius: 5px;
   border: 1px solid #ddd;
   min-height: 100px;
+  padding-left: 15px;
 }
 #send{
   padding: 15px;
