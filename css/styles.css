@@ -283,7 +283,8 @@ nav img{
   margin: 25px 0;
 }
 .switch-ios.switch-light > span{
-  width: 10%;
+  width: 23%;
+  max-width: 80px;
 }
 
 .settings p{
